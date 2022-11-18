@@ -7,7 +7,7 @@ style_path = os.path.join('static', 'style.css')
 
 @app.route("/")
 def home():
-    return render_template("index.html", user_image = img, style = style_path)
+    return render_template("index.html", user_image = img_path, style = style_path)
 
 if __name__ == "__main__":
     #make_picture()
