@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-gap: 50px;
+    border: 4px solid black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #01babc;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #01babc;
+}
+
+h1 {
+    margin: 2%;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+img {
+    width: 40%;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px gray;
+}
