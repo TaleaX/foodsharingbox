@@ -2,6 +2,7 @@
 
 import cv2
 import time
+from transfer_img import transfer
 
 def make_picture():
     time.sleep(60.0)
@@ -11,6 +12,7 @@ def make_picture():
         cv2.imwrite('static/image.jpg', frame)
 
     cap.release()
+    transfer()
 
 while True:
     make_picture()
