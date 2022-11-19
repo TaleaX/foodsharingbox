@@ -10,6 +10,7 @@ def make_picture():
     cap = cv2.VideoCapture(0)
     ret, frame = cap.read()
     if ret:
+        cv2.imwrite('/home/pi/foodsharingbox/static/image.jpg', frame)
         img = cv2.imread('/home/pi/foodsharingbox/static/image.jpg')
         rotated = ndimage.rotate(img, 180)
         cv2.imwrite('/home/pi/foodsharingbox/static/image.jpg', rotated)
