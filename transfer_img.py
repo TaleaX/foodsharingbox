@@ -5,8 +5,8 @@ from scp import SCPClient
 
 def transfer():
     credentials = []
-    
-    with open(".env", "r") as env:
+
+    with open("/home/pi/foodsharingbox/.env", "r") as env:
         for line in env:
             credentials.append(line.strip())
 
@@ -20,4 +20,4 @@ def transfer():
     ssh = createSSHClient(credentials[0], credentials[1], credentials[2], credentials[3])
 
     with SCPClient(ssh.get_transport()) as scp:
-        scp.put('static/image.jpg', '/srv/foodsharingbox/image.jpg')
+        scp.put('/home/pi/foodsharingbox/static/image.jpg', '/srv/foodsharingbox/image.jpg')
