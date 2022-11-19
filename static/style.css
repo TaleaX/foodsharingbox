@@ -2,6 +2,8 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
+    font-family: 'futura-pt', sans-serif;
+    color: white;
 }
 
 .container {
@@ -25,18 +27,49 @@ main {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #01babc;
 }
 
 h1 {
     margin: 2%;
-    font-family: 'futura-pt', sans-serif;
     font-size: 50px;
-    color: white;
 }
 
+@media ( max-width: 50em ) {
+    h1 {
+        font-size: 2.3em;
+      }
+    }
+
+@media ( max-width: 30em ) {
+    h1 {
+        font-size: 1.875em;
+        }
+    }
+
 img {
-    width: 40%;
+    min-width: 40%;
     border-radius: 10%;
     box-shadow: 5px 5px 5px gray;
 }
+
+@media ( max-width: 85em ) {
+    img {
+            width: 50%;
+        }
+    }
+
+@media ( max-width: 60em ) {
+    img {
+            width: 60%;
+        }
+    }
+
+@media ( max-width: 45em ) {
+    img {
+            width: 90%;
+        }
+    }
