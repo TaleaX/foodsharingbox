@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 from flask import Flask, url_for
 from flask_cache_buster import CacheBuster
-import os
 
 app = Flask(__name__)
 
+
 config = {
-     'extensions': ['.jpg', '.css', '.csv'],
+     'extensions': ['.jpg', '.css'],
      'hash_size': 10
 }
 
@@ -15,8 +15,9 @@ cache_buster.register_cache_buster(app)
 
 @app.route("/")
 def home():
-    return render_template("index.html", user_image = url_for('static', filename='image.jpg'), style = url_for('static', filename='style.css'))
+    img_path = url_for('static', filename='image.jpg')
+    style_path = url_for('static', filename='style.css')
+    return render_template("index.html", user_image = img_path, style = style_path)
 
 if __name__ == "__main__":
-    #make_picture()
     app.run()
